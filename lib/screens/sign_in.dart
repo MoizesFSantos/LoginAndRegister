@@ -1,4 +1,7 @@
+// ignore_for_file: unnecessary_const
+
 import 'package:flutter/material.dart';
+import 'package:login_and_register/components/sign_in_components.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -6,61 +9,88 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      height: double.infinity,
+      width: double.infinity,
+      decoration: const BoxDecoration(color: Color.fromARGB(255, 57, 106, 212)),
       child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Center(
           // ignore: prefer_const_literals_to_create_immutables
           child: Form(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
               child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Text('Login'),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .02,
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 70, horizontal: 30),
+                  height: MediaQuery.of(context).size.height * .62,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.elliptical(150, 120),
+                      bottomLeft: Radius.elliptical(150, 120),
                     ),
-                    TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      // ignore: prefer_const_constructors
-                      decoration: InputDecoration(
-                        suffixIcon: const Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: Icon(
-                            Icons.email,
-                            color: Color.fromARGB(255, 194, 193, 193),
-                          ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
                         ),
-                        hintText: 'Email',
-                        border: const OutlineInputBorder(),
                       ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .02,
-                    ),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        suffixIcon: GestureDetector(
-                          onTap: () => {},
-                          child: const Icon(
-                            Icons.visibility_off,
-                            color: Color.fromARGB(255, 194, 193, 193),
-                          ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * .02,
+                      ),
+                      SignInComponents(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Did you not have an account yet?'),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushReplacementNamed('/signUp');
+                            },
+                            child: const Text('Click Here!'),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * .01,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacementNamed('/home');
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.login,
+                              size: 25,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Sign In',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
                         ),
-                        hintText: 'Password',
-                        border: const OutlineInputBorder(),
-                      ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * .02,
-                    ),
-                    ElevatedButton(
-                      onPressed: () => {},
-                      child: const Text('SignIn'),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
