@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../controllers/sign_in_auth.dart';
 
 // ignore: use_key_in_widget_constructors
 class SignInComponents extends StatefulWidget {
@@ -15,6 +16,8 @@ class _SignInComponentsState extends State<SignInComponents> {
       child: Column(
         children: [
           TextFormField(
+            controller: getLogin,
+            validator: emailValidate,
             keyboardType: TextInputType.emailAddress,
             // ignore: prefer_const_constructors
             decoration: InputDecoration(
@@ -36,6 +39,8 @@ class _SignInComponentsState extends State<SignInComponents> {
             height: MediaQuery.of(context).size.height * .02,
           ),
           TextFormField(
+            controller: getLoginPassword,
+            validator: passwordValidate,
             obscureText: obscureText,
             decoration: InputDecoration(
               suffixIcon: GestureDetector(

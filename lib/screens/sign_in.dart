@@ -39,9 +39,9 @@ class SignIn extends StatelessWidget {
                       const Text(
                         'Login',
                         style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(255, 57, 106, 212),
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(

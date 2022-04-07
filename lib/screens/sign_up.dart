@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_and_register/components/sign_up_components.dart';
+import 'package:login_and_register/controllers/sign_up_auth.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class SignUp extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: double.infinity,
-      color: const Color.fromARGB(255, 30, 123, 199),
+      color: const Color.fromARGB(255, 57, 106, 212),
       child: Scaffold(
         appBar: AppBar(
           actions: [
@@ -24,7 +25,7 @@ class SignUp extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.save_alt_rounded),
                   onPressed: () {
-                    Navigator.of(context).pushReplacementNamed('/home');
+                    doSignUp(context);
                   },
                 )
               ],
