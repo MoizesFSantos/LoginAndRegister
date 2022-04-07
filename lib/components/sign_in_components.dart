@@ -13,6 +13,7 @@ class _SignInComponentsState extends State<SignInComponents> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: loginKey,
       child: Column(
         children: [
           TextFormField(

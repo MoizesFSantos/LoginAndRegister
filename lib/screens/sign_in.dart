@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:login_and_register/components/sign_in_components.dart';
+import 'package:login_and_register/controllers/sign_in_auth.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class SignIn extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacementNamed('/home');
+                          loginOK(context);
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,

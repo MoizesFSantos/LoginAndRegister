@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:login_and_register/api/sign_in.dart';
+
+import '../alerts/error.dart';
 
 final GlobalKey<FormState> loginKey = GlobalKey<FormState>();
 final _loginEmail = TextEditingController();
@@ -27,4 +30,14 @@ String? passwordValidate(password) {
   return null;
 }
 
-void loginOK(BuildContext context) {}
+void loginOK(BuildContext context) {
+  if (loginKey.currentState!.validate()) {
+    LoginService().login(getLogin.text, getLoginPassword.text);
+    _navigateSucess(context);
+  } else {
+    alert(context);
+  }
+}
+
+_navigateSucess(BuildContext context) =>
+    Navigator.of(context).pushReplacementNamed('/home');

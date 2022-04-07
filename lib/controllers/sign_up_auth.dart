@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_and_register/alerts/error.dart';
+import 'package:login_and_register/alerts/register_success.dart';
 import '../api/sign_up.dart';
 
 final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -33,7 +35,8 @@ String? passValidation(pass) {
 void doSignUp(BuildContext context) {
   if (formKey.currentState!.validate()) {
     SignUpService().signup(getName.text, getEmail.text, getPass.text);
+    success(context);
   } else {
-    print('invalid');
+    alert(context);
   }
 }
