@@ -1,16 +1,29 @@
-# login_and_register
-
-A new Flutter project.
+# Login with Flutter and Firebase
+Login and user registration project done in Flutter and used Firebase for project authentication and validation.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+First, run in the terminal:
+```bash
+flutter pub get
+```
+### or
+-   From Android Studio/IntelliJ: Click  **Packages get**  in the action ribbon at the top of  `pubspec.yaml`.
+To install all the packagens.
+-   From VS Code: Click  **Get Packages**  located in right side of the action ribbon at the top of  `pubspec.yaml`.
 
-A few resources to get you started if this is your first Flutter project:
+To get all packagens.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Layouts
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Login
+![](https://github.com/MoizesFSantos/LoginAnd/Register/img/login.jpeg)
+
+## Register
+![](https://github.com/MoizesFSantos/LoginAnd/Register/img/register.jpeg)
+
+## Success Alert
+![](https://github.com/MoizesFSantos/LoginAnd/Register/img/success_alert.jpeg)
+
+## Alert Error
+![](https://github.com/MoizesFSantos/LoginAnd/Register/img/error_message.jpeg)

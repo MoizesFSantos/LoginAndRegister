@@ -3,6 +3,7 @@ import '../controllers/sign_in_auth.dart';
 
 // ignore: use_key_in_widget_constructors
 class SignInComponents extends StatefulWidget {
+  const SignInComponents({Key? key}) : super(key: key);
   @override
   State<SignInComponents> createState() => _SignInComponentsState();
 }
@@ -41,7 +42,12 @@ class _SignInComponentsState extends State<SignInComponents> {
           ),
           TextFormField(
             controller: getLoginPassword,
-            validator: passwordValidate,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Password is required";
+              }
+              return null;
+            },
             obscureText: obscureText,
             decoration: InputDecoration(
               suffixIcon: GestureDetector(

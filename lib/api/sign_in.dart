@@ -10,6 +10,6 @@ class LoginService {
       body: json.encode(
           {"email": email, "password": password, "returnSecureToken": true}),
     );
-    print(response.body);
+    return response;
   }
 }

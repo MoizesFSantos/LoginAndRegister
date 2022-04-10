@@ -3,7 +3,7 @@ import 'package:login_and_register/api/sign_in.dart';
 
 import '../alerts/error.dart';
 
-final GlobalKey<FormState> loginKey = GlobalKey<FormState>();
+final loginKey = GlobalKey<FormState>();
 final _loginEmail = TextEditingController();
 final _loginPassword = TextEditingController();
 
@@ -21,12 +21,11 @@ String? emailValidate(dynamic email) {
   return null;
 }
 
-String? passwordValidate(password) {
+String? passwordValidate(String password) {
   if (password.isEmpty || password == null) {
     return "Please, enter your password";
-  } else if (password < 6) {
-    return "short password";
   }
+
   return null;
 }
 
