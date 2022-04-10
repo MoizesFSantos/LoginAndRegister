@@ -17,13 +17,13 @@ To get all packagens.
 # Layouts
 
 ## Login
-![](https://github.com/MoizesFSantos/LoginAnd/Register/img/login.jpeg)
+![login](https://user-images.githubusercontent.com/77401158/162595790-1c62568c-18cc-4cff-9515-630fb94255d0.jpeg)
 
 ## Register
-![](https://github.com/MoizesFSantos/LoginAndRegister/img/register.jpeg)
+![register](https://user-images.githubusercontent.com/77401158/162595814-8c0ad283-5aea-4a1e-adab-cf53b086834d.jpeg)
 
 ## Success Alert
-![](https://github.com/MoizesFSantos/LoginAndRegister/img/success_alert.jpeg)
+![success alert](https://user-images.githubusercontent.com/77401158/162595822-70d0c272-2c82-43ba-b6c3-8fffc83e72ba.jpeg)
 
 ## Alert Error
-![](https://github.com/MoizesFSantos/LoginAndRegister/img/error_message.jpeg)
+![error_message](https://user-images.githubusercontent.com/77401158/162595831-7882a37d-daff-4faa-b8d1-f217426eb7ae.jpeg)
