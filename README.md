@@ -20,10 +20,10 @@ To get all packagens.
 ![](https://github.com/MoizesFSantos/LoginAnd/Register/img/login.jpeg)
 
 ## Register
-![](https://github.com/MoizesFSantos/LoginAnd/Register/img/register.jpeg)
+![](https://github.com/MoizesFSantos/LoginAndRegister/img/register.jpeg)
 
 ## Success Alert
-![](https://github.com/MoizesFSantos/LoginAnd/Register/img/success_alert.jpeg)
+![](https://github.com/MoizesFSantos/LoginAndRegister/img/success_alert.jpeg)
 
 ## Alert Error
-![](https://github.com/MoizesFSantos/LoginAnd/Register/img/error_message.jpeg)
+![](https://github.com/MoizesFSantos/LoginAndRegister/img/error_message.jpeg)
